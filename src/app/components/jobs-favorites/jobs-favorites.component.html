@@ -1,0 +1,9 @@
+<ng-template [ngIf]="jobsList.length > 0" [ngIfElse]="emptyFavorites">
+  <ng-container *ngFor="let job of jobsList">
+    <app-jobs-card [job]="job" [favorite]="false"></app-jobs-card>
+  </ng-container>
+</ng-template>
+
+<ng-template #emptyFavorites>
+  <span class="empty-warning">There are no favorite items</span>
+</ng-template>

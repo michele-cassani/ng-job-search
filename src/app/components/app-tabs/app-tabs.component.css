@@ -1,0 +1,19 @@
+.app-tabs{
+  display: flex;
+
+  a {
+    text-transform: uppercase;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    color: grey;
+    flex: 10;
+
+    &.active {
+      background-color: grey;
+      color: #FFF;
+    }
+  }
+}

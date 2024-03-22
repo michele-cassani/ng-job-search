@@ -1,0 +1,12 @@
+<div class="job-card" *ngIf="job">
+  <div class="job-card-logo">
+    <img [src]="job.companyLogo" [alt]="job.companyName">
+  </div>
+  <div class="job-card-content">
+    <a class="job-card-content-link" routerLink="/jobs-list/{{ job.id }}">{{ job.title }}</a>
+    <span class="job-card-content-text">Company Name: {{ job.companyName }}</span>
+    <span class="job-card-content-text">Reference: {{ job.reference }}</span>
+  </div>
+  <span *ngIf="favorite" class="job-card-star icon-star" (click)="favoriteClick()"
+        [ngClass]="{'active': isFavorite}" id="star-{{ job.id }}"></span>
+</div>
